@@ -1,0 +1,42 @@
+# Environment variables
+.env
+.env.*
+*.env
+
+# Markdown files
+*.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+*.egg-info/
+dist/
+build/
+
+# Django
+*.sqlite3
+media/
+staticfiles/
+
+# Node / React
+node_modules/
+dist/
+build/
+.npm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

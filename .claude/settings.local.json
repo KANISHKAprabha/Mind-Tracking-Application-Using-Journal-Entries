@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python manage.py makemigrations journal --name add_sentiment_status)"
+    ]
+  }
+}
