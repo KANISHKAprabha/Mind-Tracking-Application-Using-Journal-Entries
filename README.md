@@ -70,13 +70,12 @@ npm start
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Architecture Decisions
 
-- **Role-based access control** — separate views, permissions, and dashboards for Client, Trainer, and Student roles
-- **Async task processing** — Celery + Redis handles background jobs (pose analysis, notifications) without blocking requests
-- **Subscription engine** — dynamic plan creation based on asana count, trainer/student count, and duration
-- **Payment flow** — Razorpay webhook integration for subscription activation post-payment
-- **Pose detection pipeline** — MediaPipe keypoint extraction → stored reference poses → real-time similarity comparison
+- **Service-layer pattern** — business logic separated from Django views for testability
+- **User data isolation** — every query scoped to `request.user`, no cross-user data leakage
+- **Async-ready** — Celery integrated for offloading heavy HuggingFace inference from request cycle
+
 
 ---
 
